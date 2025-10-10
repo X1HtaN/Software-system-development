@@ -1,0 +1,3 @@
+﻿  GeneralFunctions.cpp
+C:\Users\riper\Desktop\РПС\lab2\lab2_CombSort\GeneralFunctions.cpp(10,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  lab2_CombSort.vcxproj -> C:\Users\riper\Desktop\РПС\lab2\lab2_CombSort\x64\Debug\lab2_CombSort.exe
