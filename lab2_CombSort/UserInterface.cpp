@@ -55,6 +55,7 @@ void save_to_file(vector<int>vec, vector<int> result_vec) {
 			}
 
 			save_vector(vec, result_vec, url);
+			cout << "Результат успешно сохранен" << endl;
 		}
 		else if (save_menu_choice == SAVE_NO_CHOICE) {
 			return;
