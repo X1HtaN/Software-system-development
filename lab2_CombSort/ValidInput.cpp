@@ -154,6 +154,8 @@ void from_file_fill_vec(vector<int>& vec) {
 			}
 		}
 	}
+
+	input.close();
 }
 
 bool is_read_only_file(std::string path)
