@@ -1,0 +1,214 @@
+html{
+    font-family: "Hanuman", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background: #303147;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* кнопка логина в хедере */
+.login-container{
+    height: 50px;
+    width: 117px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 3px solid #D9D9D9;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.login-container:hover{
+    background-color: #505170;
+}
+
+.login-btn{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 12px;
+    padding-left: 32px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* домашняя/инфа кнопки хедера */
+
+.header-container {
+    height: 50px;
+    width: 436px;
+    margin-top: 20px;
+    border: 3px solid #D9D9D9;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+}
+
+.header-line {
+    width: 3px;
+    height: 100%;
+    background: #D9D9D9;
+}
+
+.header-btn {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #505170;
+}
+
+.header-btn.left {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.header-btn.right {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* login form */
+
+/* ====== HOME BUTTON ======*/
+.authorize-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.home-container {
+    border: 2px solid #d9d9d9;
+    border-radius: 30px;
+    width: 117px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.home-container:hover {
+    background-color: #505170;
+}
+
+.home-but {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    padding-left: 34px;
+    padding-top: 25px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    background-color: #d4d3f2;
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    height: 484px;
+    text-align: left;
+    margin-top: 25px;
+}
+
+.login-form h2 {
+    color: #303147;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #303147;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.error-msg {
+    visibility: hidden; /* вместо display:none */
+    height: 18px;       /* фиксированная высота */
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 40px;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.error-msg.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-authorize-btn {
+    background-color: #2E2F43;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 207px;
+    height: 60px;
+    margin-left: 23%;
+}
+
+.login-authorize-btn:hover {
+    background-color: #505170;
+}
+
+.register {
+    color: #D2D2F3;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
