@@ -50,6 +50,29 @@
         </div>
     </header>
 
+    <div class="app-body">
+        <div class="app-control-panel">
+            <div class="app-cp-manual">
+                <a href="#">Ввести массив вручную</a>
+            </div>
+            <div class="app-cp-rand">
+                <a href="#">Ввести случайный массив</a>
+            </div>
+            <div class="app-cp-sort">
+                <a href="#">Отсортировать массив</a>
+            </div>
+            <div clss="app-cp-show">
+                <a href="#">Получить все массивы пользователя</a>
+            </div>
+            <div class="app-cp-err">
+                <p>bugs</p>
+            </div>
+        </div>
+        <div class="app-display">
+
+        </div>
+    </div>
+
     <script>
 
 

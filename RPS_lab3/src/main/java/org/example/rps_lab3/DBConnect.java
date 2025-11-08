@@ -2,6 +2,7 @@ package org.example.rps_lab3;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class DBConnect {
     private static Connection connection = null;
@@ -64,7 +65,6 @@ public class DBConnect {
             pstmt.setString(2, password);
 
             try {
-                int rowsAffected = pstmt.executeUpdate();
                 ResultSet resultSet = pstmt.getGeneratedKeys();
                 resultSet.next();
                 int userId = resultSet.getInt(1);
@@ -77,5 +77,9 @@ public class DBConnect {
         } catch (SQLException e){
             return -1; //не удалось создать стейтмент
         }
+    }
+
+    public static int upload_list(int id, List<Integer> list){
+        return 0;
     }
 }
