@@ -44,17 +44,38 @@ public class DBConnect {
                 int userId = resultSet.getInt("id");
 
                 if (password.equals(dbPassword)) {
-                    System.out.println("DBConnect: пароль верный");
-                    return userId;
+                    return userId; //все гуд (всегда 1 возвращает)
                 } else {
-                    System.out.println("DBConnect: неверный пароль");
-                    return -1;
+                    return -1; //невенрый пароль
                 }
             } else {
-                return 0;
+                return 0; //пользователь не найден
             }
         } catch (SQLException e) {
             return 0;
+        }
+    }
+
+    public static int registrate_user(String username, String password) throws SQLException {
+        String query = "INSERT INTO users (username, password) VALUES (?, ?)";
+
+        try (PreparedStatement pstmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+
+            try {
+                int rowsAffected = pstmt.executeUpdate();
+                ResultSet resultSet = pstmt.getGeneratedKeys();
+                resultSet.next();
+                int userId = resultSet.getInt(1);
+                System.out.println(userId);
+                return userId;
+            } catch (SQLException e) {
+                return 0; //ошибка запроса
+            }
+
+        } catch (SQLException e){
+            return -1; //не удалось создать стейтмент
         }
     }
 }

@@ -28,16 +28,28 @@ header{
 }
 
 .login-container:hover{
-    background-color: #505170;
+    background-color: var(--login-hover-color);
 }
 
 .login-btn{
-    color:white;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
     padding-top: 12px;
     padding-left: 32px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.logout-btn{
+    color: #df3737;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 12px;
+    padding-left: 27px;
     display: block;
     height: 100%;
     width: 100%;
@@ -89,7 +101,6 @@ header{
 
 /* login form */
 
-/* ====== HOME BUTTON ======*/
 .authorize-header {
     position: absolute;
     top: 20px;
@@ -169,8 +180,8 @@ main {
 }
 
 .error-msg {
-    visibility: hidden; /* вместо display:none */
-    height: 18px;       /* фиксированная высота */
+    visibility: hidden;
+    height: 18px;
     color: #ff4d4d;
     font-size: 14px;
     margin-top: 8px;
@@ -211,4 +222,30 @@ main {
     text-align: center;
     margin-top: 20px;
     text-decoration: none;
+}
+
+.register:hover{
+    color: #adadd0;
+}
+
+/* registration form */
+
+.registration-btn {
+    background-color: #2E2F43;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 257px;
+    height: 60px;
+    margin-left: 70px;
+}
+
+.registration-btn:hover {
+    background-color: #505170;
 }

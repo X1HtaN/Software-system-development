@@ -34,13 +34,22 @@ public class AuthorizeServlet extends HttpServlet {
             String username = jsonRequest.optString("username", "");
             String password = jsonRequest.optString("password", "");
 
-            System.out.println("Распарсенные данные: username='" + username + "', password='" + password + "'");
-
             //Вытаскиваем пользователя из бд
             DBConnect.start_connect();
             int authResult = DBConnect.authorize_user(username, password);
 
-            System.out.println("Результат авторизации: " + authResult);
+            if (authResult > 0) {
+                //сохранение id в сессию
+                HttpSession session = request.getSession();
+                session.setAttribute("userId", authResult);
+                session.setAttribute("username", username);
+
+                //Сохранение id в куки
+                Cookie userIdCookie = new Cookie("userId", String.valueOf(authResult));
+                userIdCookie.setMaxAge(24 * 60 * 60); // 24 часа
+                userIdCookie.setPath("/");
+                response.addCookie(userIdCookie);
+            }
 
             //Формируем ответ
             jsonResponse.put("status", authResult);
